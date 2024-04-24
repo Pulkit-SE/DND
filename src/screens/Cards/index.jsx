@@ -11,6 +11,7 @@ const Cards = () => {
 
   const moveCard = useCallback((dragIndex, hoverIndex) => {
     setCards((prevCards) =>
+      // Mutate a copy of data without changing the original source
       update(prevCards, {
         $splice: [
           [dragIndex, 1],
