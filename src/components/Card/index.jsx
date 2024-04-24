@@ -78,22 +78,6 @@ const Card = ({ id, text, index, moveCard, imageUrl, onClick }) => {
     >
       <p>{text}</p>
       <ImageComponent imageUrl={imageUrl} />
-      {/* <img
-        onClick={onClick(imageUrl)}
-        onLoad={(e) => {
-          setIsImageLoading(false);
-        }}
-        height={120}
-        width={180}
-        src={imageUrl}
-      />
-      {isImageLoading && (
-        <img
-          height={100}
-          width={200}
-          src="https://loading.io/assets/mod/spinner/spin/lg.gif"
-        />
-      )} */}
     </div>
   );
 };

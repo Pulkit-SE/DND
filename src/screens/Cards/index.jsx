@@ -8,7 +8,6 @@ import "./style.css";
 
 const Cards = () => {
   const [cards, setCards] = useState(CARD_DATA);
-  const [pressedImageUrl, setPressedImageUrl] = useState("");
 
   const moveCard = useCallback((dragIndex, hoverIndex) => {
     setCards((prevCards) =>
@@ -21,12 +20,6 @@ const Cards = () => {
     );
   }, []);
 
-  const handleImagePress = (url = "") => {
-    return () => {
-      setPressedImageUrl(url);
-    };
-  };
-
   const renderCard = useCallback((card, index) => {
     return (
       <Card
@@ -36,7 +29,6 @@ const Cards = () => {
         text={card.title}
         moveCard={moveCard}
         imageUrl={card.image}
-        onClick={handleImagePress}
       />
     );
   }, []);
@@ -44,9 +36,6 @@ const Cards = () => {
   return (
     <div className="cardContainer">
       {cards.map((card, i) => renderCard(card, i))}
-      {/* {pressedImageUrl && (
-       
-      )} */}
     </div>
   );
 };

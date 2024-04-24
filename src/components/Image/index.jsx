@@ -48,7 +48,6 @@ const ImageComponent = ({ imageUrl = "" }) => {
       {isOpen && (
         <dialog
           className="dialog"
-          style={{ position: "absolute", zIndex: 2 }}
           open
           onClick={handleShowDialog}
         >
