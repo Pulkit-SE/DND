@@ -40,17 +40,14 @@ const ImageComponent = ({ imageUrl = "" }) => {
       />
       {isImageLoading && (
         <img
+          alt={"loader"}
           height={100}
           width={200}
           src="https://loading.io/assets/mod/spinner/spin/lg.gif"
         />
       )}
       {isOpen && (
-        <dialog
-          className="dialog"
-          open
-          onClick={handleShowDialog}
-        >
+        <dialog className="dialog" open onClick={handleShowDialog}>
           <img
             className="image"
             src={imageUrl}

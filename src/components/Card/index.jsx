@@ -6,7 +6,7 @@ import ImageComponent from "../Image/index.jsx";
 import { ItemTypes } from "./types.js";
 import "./style.css";
 
-const Card = ({ id, text, index, moveCard, imageUrl, onClick }) => {
+const Card = ({ id, text, index, moveCard, imageUrl }) => {
   const ref = useRef(null);
 
   const [{ handlerId }, drop] = useDrop({
